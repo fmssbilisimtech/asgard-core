@@ -1,0 +1,21 @@
+apply plugin: 'com.android.application'
+apply from: '../android_commons.gradle'
+
+android {
+    namespace 'com.asgard.asgardcore'
+    defaultConfig {
+        applicationId ApplicationId.ID
+    }
+}
+
+dependencies {
+
+    implementation AndroidLibraries.APP_COMPAT
+    implementation AndroidLibraries.CORE_KTX
+    implementation AndroidLibraries.CONSTRAINT_LAYOUT
+    implementation AndroidLibraries.MATERIAL
+
+    implementation project(Modules.COMMON)
+    implementation project(Modules.CUSTOM_SNACKBAR)
+
+}

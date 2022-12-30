@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+apply from: '../../android_commons.gradle'
+
+android {
+    namespace 'com.asgard.bottomsheet'
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation AndroidLibraries.APP_COMPAT
+    implementation AndroidLibraries.CORE_KTX
+    implementation AndroidLibraries.MATERIAL
+
+    implementation project(Modules.COMMON)
+
+}
