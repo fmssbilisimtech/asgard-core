@@ -31,16 +31,3 @@ android {
 dependencies {
     implementation KotlinLibraries.KOTLIN
 }
-
-task deleteJar(type: Delete) {
-    delete 'libs/jars/asgard_core.jar'
-}
-
-task createJar(type: Copy) {
-    from('build/intermediates/bundles/release/')
-    into('libs/jars/')
-    include('classes.jar')
-    rename('classes.jar', 'asgard_core.jar')
-}
-
-createJar.dependsOn(deleteJar, build)
