@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply from: '../../android_commons.gradle'
+apply plugin: 'maven-publish'
 
 android {
     namespace 'com.asgard.snackbar'
@@ -9,16 +10,11 @@ android {
     }
 
 }
-
 afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
                 from components.release
-
-                groupId 'com.asgard.snackbar'
-                artifactId 'snackbar'
-                version = '1.0.0'
             }
         }
     }

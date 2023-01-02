@@ -6,6 +6,16 @@ android {
     namespace 'com.asgard.common'
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+        }
+    }
+}
+
 dependencies {
 
     implementation AndroidLibraries.APP_COMPAT
