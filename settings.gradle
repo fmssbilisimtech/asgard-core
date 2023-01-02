@@ -14,6 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "AsgardCore"
 include ':app'
-include ':layouts:bottomsheet'
 include ':common'
 include ':layouts:snackbar'
