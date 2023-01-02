@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply from: '../android_commons.gradle'
+apply plugin: 'maven-publish'
 
 android {
     namespace 'com.asgard.common'
@@ -10,4 +11,5 @@ dependencies {
     implementation AndroidLibraries.APP_COMPAT
     implementation AndroidLibraries.CORE_KTX
     implementation AndroidLibraries.MATERIAL
+    implementation 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 }
