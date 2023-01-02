@@ -29,4 +29,7 @@ android {
 
 dependencies {
     implementation KotlinLibraries.KOTLIN
+
+    //Maven gradle
+    implementation 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 }
